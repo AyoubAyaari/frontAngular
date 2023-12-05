@@ -1,0 +1,16 @@
+<form>
+    <div  [hidden]="ajout">
+    <label>ID Projet</label>
+    <input type="text" [(ngModel)]="projets.idProj" name="idProj" class="form-control w-25">
+    </div>
+    <div>
+    <label>Nom Projet</label>
+    <input type="text" [(ngModel)]="projets.nomProj" name="nomProj" class="form-control"
+    placeholder="Entrez un nom de catégorie...">
+    </div>
+    <div class="mt-2">
+     <button type="submit" [disabled]="!projets.nomProj" class="btn btn-success" 
+    (click)="saveProjet()" >{{ajout ? 'Ajouter' : 'Modifier'}}</button>
+    </div>
+    </form>
+    

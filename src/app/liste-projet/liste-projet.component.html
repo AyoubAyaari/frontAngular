@@ -1,0 +1,27 @@
+<div class="container">
+<app-update-projet [projets]="updatedproj" 
+(projetUpdated)= "projetUpdated($event)"
+   [ajout]="ajout">
+</app-update-projet>
+    <div class="col-sm-4 col-md-4 col-lg-4 mb-4">
+        
+        </div>
+    <div class="card shadow mb-4">
+    <div class="card-body">
+        
+            
+    <table class="table table-striped">
+    <thead>
+    <tr> <th>Id</th><th>Nom Projet</th> </tr>
+    </thead>
+    <tbody *ngFor="let cat of projets">
+    <tr>
+    <td>{{cat.idProj}}</td>
+    <td>{{cat.nomProj}}</td>
+    <td><a class="btn btn-success" (click)="updateCat(cat)">Editer</a></td>
+    </tr>
+    </tbody>
+    </table>
+    </div>
+    </div>
+    </div>
